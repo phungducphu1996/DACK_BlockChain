@@ -1,0 +1,109 @@
+{{!< main_layout }}
+    <div id="main-content" class="clearfix">
+                <div id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li><i class="icon-home"></i> <a href="#">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                        <li class="active">Thêm sản phẩm</li>
+                    </ul><!--.breadcrumb-->
+                </div><!--#breadcrumbs-->
+                <div id="page-content" class="clearfix">
+                    <div class="row-fluid">  
+                    <!-- PAGE CONTENT BEGINS -->
+                    <h2 style="margin-left: 25%;margin-bottom: 20px;color: #438eb9;">
+                        {{title}} {{item.title}}
+                    </h2>
+                    <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_name"> Name: </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="item_name" id="item_name" placeholder="Name" class="col-xs-10 col-sm-5" value="{{item.name}}" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_price"> Price: </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="item_price" id="item_price" placeholder="$" class="col-xs-10 col-sm-5" value="{{item.price}}" />
+                            </div>
+                        </div>
+
+                                                <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_price"> Reduce Price: </label>
+
+                            <div class="col-sm-9">
+                            <input type="text" name="item_reducePrice" id="item_reducePrice" placeholder="$" class="col-xs-10 col-sm-5" value="{{item.reducePrice}}" />
+                            </div>
+                        </div>
+
+
+                                                <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_des"> Description: </label>
+
+                            <div class="col-sm-9">
+                                <textarea rows="4" cols="50" type="text" name="item_des" id="item_des" placeholder="Description" class="col-xs-10 col-sm-5">
+
+                                </textarea>
+                            </div>
+                        </div>
+
+
+                           <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_price"> Category: </label>
+
+                            <div class="col-sm-9">
+
+
+                               <select name="item_category" id="item_category">
+
+                            {{#each categorys}}
+  <option value="{{_id}}">{{name}}</option>
+                            {{/each}}
+</select>
+                            </div>
+                        </div>
+
+
+                                                   <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for=""> Available: </label>
+
+                            <div class="col-sm-9">
+                              
+                               <select name="item_status" id="item_category">
+
+                        
+  <option value="In stock">In stock</option>
+    <option value="Out of stock">Out of stock</option>
+                      
+</select>
+                            </div>
+                        </div>
+                      
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_thumbnail"> Thumbnail </label>
+
+                            <div class="col-sm-4">
+                                
+                                    <input type="file" name="thumbnail" id="thumbnail" class="col-xs-10 col-sm-5">
+ 
+                          
+                                    
+                            </div>
+                        </div>
+
+
+
+                        <button class="btn btn-primary" style="margin-left: 37%;" type="submit">
+                            {{#if isEdit}}
+                                Edit
+                            {{else}}
+                                Create
+                            {{/if}}
+                        </button>
+                    </form>
+    
+                    </div><!--/row-->
+                </div><!--/#page-content-->
+            </div><!-- #main-content -->

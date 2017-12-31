@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{{title}}</title>
+        <meta name="description" content="AutoSunfrog Membership Manager" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- basic styles -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/css/bootstrap-responsive.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/font-awesome.min.css" />
+        <!-- ace styles -->
+        <link rel="stylesheet" href="/css/fx.min.css" />
+        <link rel="stylesheet" href="/css/fx-responsive.min.css" />
+        <link rel="stylesheet" href="/css/fx-skins.min.css" />
+    </head>
+    <body>
+        <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="index.php"><small><i class="icon-group"></i> Dashboard</small></a>
+                    <ul class="nav ace-nav pull-right">
+                        <li class="light-blue user-profile">
+                            <a class="user-menu dropdown-toggle" href="#" data-toggle="dropdown">
+                                <img alt="User's Avatar" src="/images/avatar.png" class="nav-user-photo" />
+                                <span id="user_info">
+                                    <small>Welcome,</small>{{user.name}}</span>
+                                <i class="icon-caret-down"></i>
+                            </a>
+                            <ul id="user_menu" class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+                                <li><a href="logout.php"><i class="icon-off"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul><!--/.polar-nav-->
+                </div><!--/.container-fluid-->
+            </div><!--/.navbar-inner-->
+        </div><!--/.navbar-->
+
+        <div class="container-fluid" id="main-container">
+            <a href="#" id="menu-toggler"><span></span></a><!-- menu toggler -->
+            <div id="sidebar">
+                <ul class="nav nav-list">
+                    <li>
+                        <a href="../" target="_blank">
+                            <i class="icon-home orange"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li {{#if activeProduct}}class="active"{{/if}}>
+                        <a href="/dashboard/products">
+                            <i class="icon-list-alt orange"></i>
+                            <span>Product</span>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="/order" target="_blank">
+                            <i class="icon-shopping-cart orange"></i>
+                            <span>Order</span>
+                        </a>
+                    </li>
+
+
+
+                             <li {{#if activeCategory}}class="active"{{/if}}>
+                        <a href="/dashboard/categorys">
+                            <i class="icon-list orange"></i>
+                            <span>Category</span>
+                        </a>
+                    </li>
+
+                <li>
+                     
+
+
+                    <li {{#if activeUser}}class="active"{{/if}}>
+                        <a href="/dashboard/user" target="_blank">
+                            <i class="icon-user orange"></i>
+                            <span>User</span>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="/dashboard/setting" target="_blank">
+                            <i class="icon-info orange"></i>
+                            <span>Setting</span>
+                        </a>
+                    </li>
+                </ul><!--/.nav-list-->
+            </div><!--/#sidebar-->
+            {{{body}}}
+                    </div><!--/.fluid-container#main-container-->
+        </body>
+</html>
+

@@ -1,0 +1,89 @@
+{{!< main_layout }}
+    <div id="main-content" class="clearfix">
+                <div id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li><i class="icon-home"></i> <a href="#">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                        <li class="active">Edit User</li>
+                    </ul><!--.breadcrumb-->
+                </div><!--#breadcrumbs-->
+                <div id="page-content" class="clearfix">
+                    <div class="row-fluid">  
+                    <!-- PAGE CONTENT BEGINS -->
+                    <h2 style="margin-left: 25%;margin-bottom: 20px;color: #438eb9;">
+                        {{title}} {{item.title}}
+                    </h2>
+                    <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="l"> Email: </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="item_username" id="item_username" placeholder="Name" class="col-xs-10 col-sm-5" value="{{item.username}}" />
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for=""> Name: </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="item_name" id="item_name" placeholder="" class="col-xs-10 col-sm-5" value="{{item.name}}" />
+                            </div>
+                        </div>
+
+                                                <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for=""> Address: </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="item_address" id="item_address" placeholder="" class="col-xs-10 col-sm-5" value="{{item.address}}" />
+                            </div>
+                        </div>
+
+                       <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for=""> Age: </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="item_age" id="item_age" placeholder="" class="col-xs-10 col-sm-5" value="{{item.age}}" />
+                            </div>
+                        </div>
+
+
+                       <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for=""> Mobile: </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="item_mobile" id="item_mobile" placeholder="" class="col-xs-10 col-sm-5" value="{{item.mobile}}" />
+                            </div>
+                        </div>
+
+
+                        
+
+
+                                                   <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for=""> Type: </label>
+
+                            <div class="col-sm-9">
+                              
+                               <select name="item_type" id="item_type">
+
+                        
+  <option value="admin">Admin</option>
+    <option value="user">User</option>
+                      
+</select>
+                            </div>
+                        </div>
+                      
+                        
+
+                        <button class="btn btn-primary" style="margin-left: 37%;" type="submit">
+                           
+                               Save
+                            
+                             
+                        </button>
+                    </form>
+    
+                    </div><!--/row-->
+                </div><!--/#page-content-->
+            </div><!-- #main-content -->

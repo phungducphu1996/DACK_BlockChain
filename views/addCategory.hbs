@@ -1,0 +1,46 @@
+{{!< main_layout }}
+    <div id="main-content" class="clearfix">
+                <div id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li><i class="icon-home"></i> <a href="#">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                        <li class="active">Add Category</li>
+                    </ul><!--.breadcrumb-->
+                </div><!--#breadcrumbs-->
+                <div id="page-content" class="clearfix">
+                    <div class="row-fluid">  
+                    <!-- PAGE CONTENT BEGINS -->
+                    <h2 style="margin-left: 25%;margin-bottom: 20px;color: #438eb9;">
+                        {{title}} {{item.title}}
+                    </h2>
+                    <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for=""> Name </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="category_name" id="category_name" placeholder="Name" class="col-xs-10 col-sm-5"  value="{{name}}" />
+                            </div>
+                        </div>
+
+                    
+
+
+
+                        <button class="btn btn-primary" style="margin-left: 37%;" type="submit">
+                         
+
+                               Add
+                           
+                        </button>
+
+
+                    </form>
+                    {{#if activeAddProduct}}
+                      <div class="col-sm-9">
+     <label class="add-label" style="margin-left: 37%;" > Added! </label>
+
+       </div>
+       {{/if}}
+                    </div><!--/row-->
+                </div><!--/#page-content-->
+            </div><!-- #main-content -->

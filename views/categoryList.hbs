@@ -1,0 +1,92 @@
+<div class="left_content">
+
+     <div class="title_box">My Account</div>
+     {{#if user}}
+    <div class="border_box">
+        <div class="form-group">
+<label>Welcome {{user.name}}</label>
+    </div>
+      <form >
+        <button class="btn btn-primary" type="submit" style="border-radius: 12px;color:#fff" formaction="../user/signout">Sign Out</button>
+      </form>
+
+    
+
+     {{else}}
+      <div class="border_box">
+      
+          <form class="form-horizontal "id="user" role="form"  method="post" enctype="multipart/form-data" style="line-height: 2.5;">
+          <div class="form-group">
+          <div class="col-xs-12">
+        <input type="text" name="username" id="username" class="form-control" placeholder="email" />
+         </div>
+            </div>
+
+              <div class="form-group">
+               <div class="col-xs-12">
+        <input type="password" name="password" id="password" class="form-control" placeholder="pass"/>
+        </div>
+        </div>
+
+        <div class="form-group">
+        <button class="btn btn-primary" type="submit" style="border-radius: 12px;color:#fff" formaction="../user/signin">Login</button>
+                </form>
+                
+                    <button class="btn btn-primary"  style="border-radius: 12px;color:#fff"> Sign Up</button>
+
+
+             
+        </div>
+{{/if}}
+
+
+       </div>
+      <div class="title_box">Categories</div>
+      <ul class="left_menu">
+ {{#each categorys}}
+
+        <li class="even"><a href="/categorys/{{_id}}">{{name}}</a></li>
+{{/each}}
+
+      </ul>
+         <div class="banner_adds"> <a href="#"><img width="167" src="../images/bann1.jpg" alt="" border="0" /></a> </div>
+
+    </div>
+
+
+<div class="center_content">
+      <div class="center_title_bar">Latest Products</div>
+        {{#each item}}
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">{{name}}</a></div>
+          <div class="product_img"><a href="#"><img width="94" height="71" src="/images/{{thumbnail}}" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="reduce">350$</span> <span class="price">{{price}}$</span></div>
+        </div>
+        <div class="prod_details_tab"> <a href="#" class="prod_buy">Add to Cart</a> <a href="/products/{{_id}}" class="prod_details">Details</a> </div>
+      </div>
+      {{/each}}
+       </div>
+
+
+<div class="right_content">
+      <div class="title_box">Search</div>
+      <div class="border_box">
+      <form id="search" role="form" action="search" method="post" enctype="multipart/form-data">
+        <input type="text" name="newsletter" id="newsletter" class="newsletter_input" placeholder="keyword"/>
+
+        <button class="btn btn-primary" type="submit" style="border-radius: 12px;color:#fff">search</button></div>
+        </form>
+      <div class="shopping_cart">
+        <div class="title_box">Shopping cart</div>
+        <div class="cart_details"> 3 items <br />
+          <span class="border_cart"></span> Total: <span class="price">350$</span> </div>
+        <div class="cart_icon"><a href="#"><img src="/images/shoppingcart.png" alt="" width="35" height="35" border="0" /></a></div>
+      </div>
+       <div class="banner_adds"> <a href="#"><img src="../images/bann2.jpg" alt="" border="0" /></a> </div>
+      </div>
+     
+
+ 
+    <!-- end of right content -->
+    <!-- end of center content -->

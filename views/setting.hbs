@@ -1,0 +1,82 @@
+{{!< main_layout }}
+    <div id="main-content" class="clearfix">
+                <div id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li><i class="icon-home"></i> <a href="#">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                        <li class="active">Thêm sản phẩm</li>
+                    </ul><!--.breadcrumb-->
+                </div><!--#breadcrumbs-->
+                <div id="page-content" class="clearfix">
+                    <div class="row-fluid">  
+                    <!-- PAGE CONTENT BEGINS -->
+                    <h2 style="margin-left: 25%;margin-bottom: 20px;color: #438eb9;">
+                        {{title}} {{item.title}}
+                    </h2>
+                    <form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_name"> Title Site: </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="title" id="title" placeholder="Title" class="col-xs-10 col-sm-5" value="{{item.title}}" />
+                            </div>
+                        </div>
+
+                      <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_thumbnail"> Logo: </label>
+
+                            <div class="col-sm-4">
+                                
+                                    <input type="file" name="logo" id="logo" class="col-xs-10 col-sm-5">
+ 
+                          
+                                    
+                            </div>
+                        </div>
+
+
+                                              <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_thumbnail"> Left Banner </label>
+
+                            <div class="col-sm-4">
+                                
+                                    <input type="file" name="banner1" id="banner1" class="col-xs-10 col-sm-5">
+ 
+                          
+                                    
+                            </div>
+                        </div
+
+                                              <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="item_thumbnail"> Right Banner: </label>
+
+                            <div class="col-sm-4">
+                                
+                                    <input type="file" name="banner2" id="banner2" class="col-xs-10 col-sm-5">
+ 
+                          
+                                    
+                            </div>
+                        </div
+
+
+                       
+
+              
+
+
+                        
+
+
+
+                        <button class="btn btn-primary" style="margin-left: 37%;" type="submit">
+                         
+
+                              Save
+                           
+                        </button>
+                    </form>
+    
+                    </div><!--/row-->
+                </div><!--/#page-content-->
+            </div><!-- #main-content -->
